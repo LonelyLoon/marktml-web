@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarkTML Help</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon.png">
+</head>
+<body>
+<header>
+<a class="brand" href="index.html"><img src="icon.png" alt=""> MarkTML</a>
+<nav><a href="index.html" aria-current="page">Help</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="de/index.html" lang="de">Deutsch</a></nav>
+</header>
+<main>
+
+<h1>MarkTML</h1>
+<p class="lead">Markdown, translated: type short, save as HTML.</p>
+<p>MarkTML is a Markdown editor for the Mac. You type short, memorable marks such as <code>_…_</code> or <code>&lt;blue&gt;…&lt;/blue&gt;</code>. It saves an ordinary <code>.md</code> file with standard Markdown and HTML, which browsers, Obsidian and Typora display correctly. While you edit, marks appear only at the cursor; everything else looks finished.</p>
+<p>To try every element, open the sample document from the Help menu.</p>
+<p>MarkTML requires macOS 26 or later. It is tested on Macs with Apple silicon, not on Intel Macs.</p>
+
+<h2>Syntax</h2>
+<p>This applies to the “Markdown+” mode, the default.</p>
+<div class="table"><table><thead><tr><th>You type</th><th>Result</th><th>In the file</th></tr></thead><tbody><tr><td><code>_text_</code></td><td><u>text</u></td><td><code>&lt;u&gt;text&lt;/u&gt;</code></td></tr><tr><td><code>__text__</code></td><td><span style="text-decoration: underline double">text</span></td><td><code>&lt;span style=&quot;text-decoration: underline double;&quot;&gt;…</code></td></tr><tr><td><code>*text*</code></td><td><strong>text</strong></td><td><code>**text**</code></td></tr><tr><td><code>**text**</code></td><td><strong><u>text</u></strong></td><td><code>**&lt;u&gt;text&lt;/u&gt;**</code></td></tr><tr><td><code>___text___</code></td><td><strong><span style="text-decoration: underline double">text</span></strong></td><td><code>**&lt;span style=&quot;…&quot;&gt;text&lt;/span&gt;**</code></td></tr><tr><td><code>//text//</code></td><td><em>text</em></td><td><code>*text*</code></td></tr><tr><td><code>~~text~~</code></td><td><s>text</s></td><td><code>~~text~~</code></td></tr><tr><td><code>&#x27;text&#x27;</code></td><td><code>text</code></td><td><code>`text`</code></td></tr><tr><td><code>==text==</code></td><td><mark>text</mark></td><td><code>&lt;mark&gt;text&lt;/mark&gt;</code></td></tr><tr><td><code>&lt;blue&gt;text&lt;/blue&gt;</code></td><td><span style="color: #2f6fed">text</span></td><td><code>&lt;span style=&quot;color: blue;&quot;&gt;text&lt;/span&gt;</code></td></tr><tr><td><code>&lt;&lt;red&gt;&gt;text&lt;&lt;/red&gt;&gt;</code></td><td><mark style="background: #ffc9c9">text</mark></td><td><code>&lt;mark style=&quot;background: …;&quot;&gt;text&lt;/mark&gt;</code></td></tr><tr><td><code>m^2^</code></td><td>m<sup>2</sup></td><td><code>m&lt;sup&gt;2&lt;/sup&gt;</code></td></tr><tr><td><code>H,,2,,O</code></td><td>H<sub>2</sub>O</td><td><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></td></tr><tr><td><code>{⌘S}</code></td><td><kbd>⌘S</kbd></td><td><code>&lt;kbd&gt;⌘S&lt;/kbd&gt;</code></td></tr><tr><td><code>%%note%%</code></td><td><em>hidden</em></td><td><code>&lt;!-- note --&gt;</code></td></tr><tr><td><code>![[image.png]]</code></td><td>image</td><td><code>![](image.png)</code></td></tr><tr><td><code>![[image.png|300]]</code></td><td>image, 300 wide</td><td><code>&lt;img src=&quot;image.png&quot; width=&quot;300&quot;&gt;</code></td></tr></tbody></table></div>
+<p>Private notes do not appear in the view, when copying or in exports.</p>
+<p>Colors: all CSS color names, and German words such as blau or rot.</p>
+
+<h2>“Markdown Standard” mode</h2>
+<p>If you prefer the usual Markdown, choose this mode in Settings. Then <code>*…*</code> and <code>_…_</code> mean italic, <code>**…**</code> and <code>__…__</code> mean bold. Underline with <kbd>⌘U</kbd>, double underline with <kbd>⌘⇧U</kbd>.</p>
+
+<h2>While typing</h2>
+<p>MarkTML adds closing marks and brackets for you and wraps a selection. You can turn this off in Settings.</p>
+<p><code>- </code> turns into a bullet at once. <kbd>⇥</kbd> and <kbd>⇧⇥</kbd> indent list lines and change the level of headings. Insert tables with the grid in the toolbar or from the Format menu.</p>
+
+<h2>Outlining</h2>
+<div class="table"><table><thead><tr><th>Keys</th><th>Action</th></tr></thead><tbody><tr><td><kbd>⌃⌘↑</kbd> <kbd>⌃⌘↓</kbd></td><td>Move a line and its sub-lines up or down</td></tr><tr><td><kbd>⌃⌘←</kbd> <kbd>⌃⌘→</kbd></td><td>Collapse or expand sub-lines; this affects the window only, not the file</td></tr></tbody></table></div>
+
+<h2>Shortcuts</h2>
+<div class="table"><table><thead><tr><th>Keys</th><th>Action</th></tr></thead><tbody><tr><td><kbd>⌘E</kbd></td><td>Switch between view and edit</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>Show or hide the right pane with the saved form</td></tr><tr><td><kbd>⌘K</kbd></td><td>Insert a link</td></tr><tr><td><kbd>⌘C</kbd></td><td>Copy with formatting; plain text editors receive the saved form</td></tr></tbody></table></div>
+
+<h2>Right pane</h2>
+<p>The right pane shows the same file in its long form. With “Edit” checked you can type there too: the text on the right becomes the file at once, and the left side follows a moment later.</p>
+
+<h2>Images and files</h2>
+<p>Images and file links are found relative to the document’s folder. Files you drag in go to the subfolder <code>Anhaenge</code>. MarkTML asks for access once per folder. Click a file link for Quick Look, double-click to open it.</p>
+
+<h2>Export</h2>
+<p>The File menu exports .docx, .rtf, .rtfd, .txt, .odt, PDF, HTML and .opml. Private notes are always left out. Images are kept in .docx, .rtfd, PDF and HTML; .odt and .rtf show the file name instead.</p>
+
+</main>
+<footer>© 2026 Andreas Stricker</footer>
+</body>
+</html>

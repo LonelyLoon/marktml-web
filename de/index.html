@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarkTML Hilfe</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../icon.png">
+</head>
+<body>
+<header>
+<a class="brand" href="index.html"><img src="../icon.png" alt=""> MarkTML</a>
+<nav><a href="index.html" aria-current="page">Hilfe</a><a href="support.html">Support</a><a href="datenschutz.html">Datenschutz</a><a href="../index.html" lang="en">English</a></nav>
+</header>
+<main>
+
+<h1>MarkTML</h1>
+<p class="lead">Markdown, translated: kurz tippen, gespeichert wird in HTML übersetzt.</p>
+<p>MarkTML ist ein Markdown-Editor für den Mac. Sie tippen kurze, merkbare Zeichen wie <code>_…_</code> oder <code>&lt;blau&gt;…&lt;/blau&gt;</code>. Gespeichert wird eine gewöhnliche <code>.md</code>-Datei mit Standard-Markdown und HTML, die auch Browser, Obsidian oder Typora richtig anzeigen. Beim Bearbeiten sehen Sie die Zeichen nur an der Schreibmarke, sonst ist der Text fertig dargestellt.</p>
+<p>Alle Elemente zum Ausprobieren finden Sie unter <strong>Hilfe › Beispieldatei öffnen</strong>.</p>
+<p>MarkTML braucht macOS 26 oder neuer. Getestet ist es auf Macs mit Apple-Prozessor, nicht auf Intel-Macs.</p>
+
+<h2>Schreibweisen</h2>
+<p>Das gilt im Modus «Markdown+», der Vorgabe.</p>
+<div class="table"><table><thead><tr><th>Eingabe</th><th>Ergebnis</th><th>In der Datei</th></tr></thead><tbody><tr><td><code>_Text_</code></td><td><u>Text</u></td><td><code>&lt;u&gt;Text&lt;/u&gt;</code></td></tr><tr><td><code>__Text__</code></td><td><span style="text-decoration: underline double">Text</span></td><td><code>&lt;span style=&quot;text-decoration: underline double;&quot;&gt;…</code></td></tr><tr><td><code>*Text*</code></td><td><strong>Text</strong></td><td><code>**Text**</code></td></tr><tr><td><code>**Text**</code></td><td><strong><u>Text</u></strong></td><td><code>**&lt;u&gt;Text&lt;/u&gt;**</code></td></tr><tr><td><code>___Text___</code></td><td><strong><span style="text-decoration: underline double">Text</span></strong></td><td><code>**&lt;span style=&quot;…&quot;&gt;Text&lt;/span&gt;**</code></td></tr><tr><td><code>//Text//</code></td><td><em>Text</em></td><td><code>*Text*</code></td></tr><tr><td><code>~~Text~~</code></td><td><s>Text</s></td><td><code>~~Text~~</code></td></tr><tr><td><code>&#x27;Text&#x27;</code></td><td><code>Text</code></td><td><code>`Text`</code></td></tr><tr><td><code>==Text==</code></td><td><mark>Text</mark></td><td><code>&lt;mark&gt;Text&lt;/mark&gt;</code></td></tr><tr><td><code>&lt;blau&gt;Text&lt;/blau&gt;</code></td><td><span style="color: #2f6fed">Text</span></td><td><code>&lt;span style=&quot;color: blue;&quot;&gt;Text&lt;/span&gt;</code></td></tr><tr><td><code>&lt;&lt;rot&gt;&gt;Text&lt;&lt;/rot&gt;&gt;</code></td><td><mark style="background: #ffc9c9">Text</mark></td><td><code>&lt;mark style=&quot;background: …;&quot;&gt;Text&lt;/mark&gt;</code></td></tr><tr><td><code>m^2^</code></td><td>m<sup>2</sup></td><td><code>m&lt;sup&gt;2&lt;/sup&gt;</code></td></tr><tr><td><code>H,,2,,O</code></td><td>H<sub>2</sub>O</td><td><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></td></tr><tr><td><code>{⌘S}</code></td><td><kbd>⌘S</kbd></td><td><code>&lt;kbd&gt;⌘S&lt;/kbd&gt;</code></td></tr><tr><td><code>%%Notiz%%</code></td><td><em>unsichtbar</em></td><td><code>&lt;!-- Notiz --&gt;</code></td></tr><tr><td><code>![[Bild.png]]</code></td><td>Bild</td><td><code>![](Bild.png)</code></td></tr><tr><td><code>![[Bild.png|300]]</code></td><td>Bild, 300 breit</td><td><code>&lt;img src=&quot;Bild.png&quot; width=&quot;300&quot;&gt;</code></td></tr></tbody></table></div>
+<p>Private Notizen erscheinen nicht in der Ansicht, nicht beim Kopieren und nicht im Export.</p>
+<p>Farben: blau, rot, dunkelrot, grün, gelb, violett, türkis, grau, orange, rosa, braun und alle englischen CSS-Farbnamen, zum Beispiel <code>&lt;blue&gt;…&lt;/blue&gt;</code>.</p>
+<p>Auf der Schweizer Tastatur ist <code>^</code> eine Tottaste: Das Leerzeichen direkt danach schluckt macOS.</p>
+
+<h2>Modus «Markdown Standard»</h2>
+<p>Wer gewohntes Markdown tippen will, wählt in den Einstellungen diesen Modus. Dann gilt <code>*…*</code> und <code>_…_</code> für kursiv, <code>**…**</code> und <code>__…__</code> für fett. Unterstrichen geht mit <kbd>⌘U</kbd>, doppelt unterstrichen mit <kbd>⌘⇧U</kbd>.</p>
+
+<h2>Beim Tippen</h2>
+<p>Schliessende Zeichen und Klammern ergänzt MarkTML von selbst, und eine Auswahl wird umschlossen. Wer das nicht mag, schaltet «Markdown automatisch ergänzen» in den Einstellungen aus.</p>
+<p>Aus <code>- </code> wird sofort ein Aufzählungspunkt. <kbd>⇥</kbd> und <kbd>⇧⇥</kbd> rücken Listenzeilen ein und aus und ändern die Stufe von Titeln. Tabellen fügen Sie über das Raster in der Symbolleiste oder mit <strong>Format › Tabelle …</strong> ein.</p>
+
+<h2>Gliederung</h2>
+<div class="table"><table><thead><tr><th>Tasten</th><th>Wirkung</th></tr></thead><tbody><tr><td><kbd>⌃⌘↑</kbd> <kbd>⌃⌘↓</kbd></td><td>Zeile samt Unterzeilen nach oben oder unten verschieben</td></tr><tr><td><kbd>⌃⌘←</kbd> <kbd>⌃⌘→</kbd></td><td>Unterzeilen ein- und ausklappen; das gilt nur im Fenster, nicht in der Datei</td></tr></tbody></table></div>
+
+<h2>Kurzbefehle</h2>
+<div class="table"><table><thead><tr><th>Tasten</th><th>Wirkung</th></tr></thead><tbody><tr><td><kbd>⌘E</kbd></td><td>zwischen Ansicht und Bearbeiten wechseln</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>Bereich rechts mit der gespeicherten Fassung ein- und ausblenden</td></tr><tr><td><kbd>⌘K</kbd></td><td>Link einfügen</td></tr><tr><td><kbd>⌘C</kbd></td><td>formatiert kopieren; reine Texteditoren erhalten die gespeicherte Fassung</td></tr></tbody></table></div>
+
+<h2>Bereich rechts</h2>
+<p>Rechts steht dieselbe Datei in der langen Form. Ist «Bearbeiten» gesetzt, können Sie auch dort tippen: Der Text rechts ist dann sofort die Datei, links folgt er nach einem kurzen Moment.</p>
+
+<h2>Bilder und Dateien</h2>
+<p>Bilder und Dateilinks werden relativ zum Ordner der Datei gefunden. Hineingezogene Dateien kommen in den Unterordner <code>Anhaenge</code>. MarkTML fragt einmal pro Ordner um Zugriff. Ein Klick auf einen Dateilink zeigt die Übersicht, ein Doppelklick öffnet die Datei.</p>
+
+<h2>Exportieren</h2>
+<p>Unter <strong>Ablage › Exportieren</strong> gibt es .docx, .rtf, .rtfd, .txt, .odt, PDF, HTML und .opml. Private Notizen fallen überall weg. Bilder bleiben in .docx, .rtfd, PDF und HTML erhalten; .odt und .rtf zeigen stattdessen den Dateinamen.</p>
+
+</main>
+<footer>© 2026 Andreas Stricker</footer>
+</body>
+</html>
